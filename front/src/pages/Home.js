@@ -51,7 +51,7 @@ const loadUsers = async ()=>
             <td>{u.username}</td>
             <td>{u.email}</td>
             <td>
-                <button className='btn btn-primary mx-2'>View</button>
+                <Link to={`/viewuser/${u.id}`} className='btn btn-primary mx-2'>View</Link>
                 <Link to={`/edituser/${u.id}`} className='btn btn-outline-primary mx-2'>Edit</Link>
                 <button onClick={()=>deleteU(u.id)} className='btn btn-danger mx-2'>Delete</button>
             </td>
